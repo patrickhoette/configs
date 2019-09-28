@@ -57,5 +57,5 @@ Folder for each program. Scripts folder for management scripts. Pretty simple. R
 *If you find any problems with the files or configurations described in this repository feel free to send me an email. If you have questions feel free to do the same.*
 
 * __Email:__ `public@patrickhoette.email`
-* __LinkedIn:__ [https://www.linkedin.com/in/patrickhoette/](patrickhoette)
+* __LinkedIn:__ [patrickhoette](https://www.linkedin.com/in/patrickhoette/)
 
