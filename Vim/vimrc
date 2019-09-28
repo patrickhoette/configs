@@ -1,0 +1,57 @@
+" PLUGINS
+" ---
+
+set shell=/bin/bash
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ap/vim-css-color'
+Plugin 'dag/vim-fish'
+Plugin 'elzr/vim-json'
+Plugin 'udalov/kotlin-vim'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'airblade/vim-gitgutter'
+
+call vundle#end()
+
+" PLUGIN CONFIGURATIONS
+" ---
+
+let g:pandoc#modules#disabled = ["folding"]
+
+" FORMATTING
+" ---
+
+" Indenting
+filetype plugin indent on
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set smarttab
+
+" Syntax highlighting
+syntax on 
+set showmatch
+
+" Line numbers
+set number
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Backspacing
+set backspace=2
+
+" THEMING
+" ---
+
+colorscheme atom-dark
+set background=dark
