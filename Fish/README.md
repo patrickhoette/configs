@@ -10,9 +10,9 @@ I use [fisher](https://github.com/jorgebucaran/fisher) as a package manager for 
 
 ### Themes
 
-I use a modified version of the [bobthefish](https://github.com/oh-my-fish/theme-bobthefish) theme's default dark theme. I modified it using the colours from the Dracula theme and a bit of personal preferences. Further more I dropped the right side prompt as I absolutely hate them. I also dropped most info of of the prompt meaning when you are in in your home folder the prompt is as minimal as it can be while looking nice. Honestly do you need to know the logged in user and hostname when you are on your computer?
+I use a modified version of [bobthefish](https://github.com/oh-my-fish/theme-bobthefish)'s default dark theme. I modified it using the colours from the Dracula theme and a bit of personal preference. Further more I dropped the right side prompt as I absolutely hate them. I also dropped most info of, of the prompt meaning when you are in in your home folder the prompt is as minimal as it can be while looking nice. Honestly do you need to know the logged in user and hostname when you are on your own machine?
 
-For further information on theming refer to the [Configuration section](#configuration) below.
+For further information on theming refer to the [configuration section](#configuration) below.
 
 ## Configuration
 
@@ -58,7 +58,9 @@ set fish_greeting
 
 ## Functions
 
-Yeah I am truly this lazy (I prefer the term efficient though). Commands to create are listed below. If looking for the function file check the [function directory](functions). I broke them down by their rough categories.
+*Yeah I am truly this lazy (I prefer the term efficient though).* 
+
+Commands to create the aliases are listed below. If you are looking for the function file check the [function directory](functions).
 
 __Short hand__
 
@@ -74,7 +76,8 @@ alias -s e='exit'
 # Ranger's name is too long to type and fm is a nice abbreviation of file manager 
 alias -s fm='ranger'
 
-# At some point or other I had to create a bootable usb a lot and created this alias, now I can't live without it
+# At some point or other I had to create a bootable usb a lot and 
+# created this alias, now I can't live without it
 alias -s ldisk='sudo fdisk -l'
 
 
@@ -108,7 +111,7 @@ alias -S cfish='cd ~/.config/fish'
 
 __Default options__
 
-*These are command name overrides so that always have some standard options. Saves me time and I don't have remember every word of the alphabet for every program*
+*These are command overrides so that they always run with some standard options. Saves me time and I don't have remember every letter of the alphabet for every program*
 
 ```shell
 # Copy files: 
@@ -157,7 +160,7 @@ __Logic__
 ```shell
 # function name = update
 # Checks package manager and executes correct commands for syncing, upgrading and remove orphans.
- function update --description 'alias update=yay -Syu; sudo pacman -Rns (sudo pacman -Qtdq)'
+function update --description 'alias update=yay -Syu; sudo pacman -Rns (sudo pacman -Qtdq)'
 	if ! type pacman > /dev/null; then
 	sudo apt-get update; sudo apt-get upgrade; sudo apt-get auto-remove
   	else
