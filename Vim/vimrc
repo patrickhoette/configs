@@ -22,7 +22,7 @@ call vundle#end()
 " PLUGIN CONFIGURATIONS
 " ---
 
-let g:pandoc#modules#disabled = ["folding"]
+let g:pandoc#modules#disabled=["folding"]
 
 " FORMATTING
 " ---

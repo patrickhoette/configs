@@ -27,7 +27,7 @@ alias -s vpi='vim +PluginInstall +PluginClean +PluginUpdate +qall'
 __Turning off folding__
 
 ```shell
-let g:pandoc#modules#disabled= ["folding"]
+let g:pandoc#modules#disabled=["folding"]
 ```
 
 ## Theme
