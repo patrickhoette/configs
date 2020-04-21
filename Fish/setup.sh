@@ -8,7 +8,6 @@ echo "Copying over configurations"
 cp -r completions ~/.config/fish/
 cp -r conf.d ~/.config/fish/
 cp config.fish ~/.config/fish/
-cp fish_variables ~/.config/fish/
 cp fishfile ~/.config/fish/
 cp -r functions ~/.config/fish/
 
