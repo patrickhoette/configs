@@ -1,4 +1,4 @@
 function gva
-	./gradlew clean assemble clean test;
+	./gradlew detekt clean assemble clean test;
 end
 

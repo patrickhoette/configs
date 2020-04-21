@@ -10,8 +10,8 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 echo "Installing oh-my-fish"
 curl -L https://get.oh-my.fish | fish
 
-echo "Installing bobthefish theme"
-fish -c 'fisher add oh-my-fish/theme-bobthefish'
+echo "Installing krisleech theme"
+omf install krisleech
 
 echo "Copying over configurations"
 cp -r completions ~/.config/fish/
