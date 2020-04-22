@@ -1,0 +1,51 @@
+ZSH_THEME="miloshadzic"
+DISABLE_UPDATE_PROMPT="true"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+HIST_STAMPS="yyyy-mm-dd"
+
+export ZSH="/Users/patrickhoette/.oh-my-zsh"
+export UPDATE_ZSH_DAYS=7
+export EDITOR='vim'
+export VISUAL='vim'
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk8/Contents/Home
+export PATH=~/Applications/bin:~/myApplications/bin:/usr/bin:/usr/local/bin:/opt/local/bin:$PATH
+
+plugins=(sudo)
+
+source $ZSH/oh-my-zsh.sh
+
+# Edit ZSH Config (this file)
+function vzc() {
+   	vim ~/.zshrc
+}
+
+# Gradlew
+function g() {
+	./gradlew $*
+}
+
+# Gradle Jacoco Report
+function gjr() {
+	./gradlew clean jacocoTestReportRelease jacocoTestReport
+}
+
+# Gradle Verify All
+function gva() {
+	./gradlew clean test clean assemble
+}
+
+# Vim Zsh Config
+function vzc() {
+	vim ~/.zshrc
+}
+
+# Clear
+function c() {
+	clear
+}
+
+# Exit
+function e() {
+	exit
+}
