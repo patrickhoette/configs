@@ -10,48 +10,39 @@ Just my various configuration files. Take what you like, all of it or what you d
 
 ### Text Editors
 * [Vim](https://www.vim.org/)
-* [Vundle](https://github.com/VundleVim/Vundle.vim)
+	* [Vundle](https://github.com/VundleVim/Vundle.vim)
 * [Atom](https://atom.io/)
 
 ### Terminal
-* [Fish](https://fishshell.com/)
 * [URxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)
+* [Zsh](https://www.zsh.org/)
+	* [zgen](https://github.com/tarjoilija/zgen)
 
-### IDEs
+### Development
 * [Android Studio](https://developer.android.com/studio/)
-* [IntelliJ/idea](https://www.jetbrains.com/idea/)
+* [IntelliJ](https://www.jetbrains.com/idea/)
 * [PyCharm](https://www.jetbrains.com/pycharm/?fromMenu)
-* [GoLand](https://www.jetbrains.com/go/?fromMenu)
+* [Git](https://git-scm.com/)
 
 ### File Management
 * [Ranger](https://ranger.github.io/)
-* [Git](https://git-scm.com/)
 * [Rsync](https://rsync.samba.org/)
 
-### Window Manager
-* [i3](https://i3wm.org/)
+### OS
+* [Arch Linux](https://www.archlinux.org/)
 * [i3-gaps](https://github.com/Airblader/i3)
-
-### Package Management
 * [Pacman](https://www.archlinux.org/pacman/)
+* [Powerpill](https://xyne.archlinux.ca/projects/powerpill/)
+* [Trizen](https://github.com/trizen/trizen)
 * [Makepkg](https://wiki.archlinux.org/index.php/Makepkg)
-* [Yay](https://github.com/Jguer/yay)
-
-### Theming
-* [Xresources](https://wiki.archlinux.org/index.php/X_resources)
 
 ### Media
-* [Jack](https://jackaudio.org/)
-* [Cadence](https://kx.studio/Applications:Cadence)
-* [Carla](https://kx.studio/Applications:Carla)
 * [Mpv](https://mpv.io/)
 * [Youtube-dl](https://youtube-dl.org/)
+* [Spotify](https://www.spotify.com)
 
 ## Fonts
-See the [fonts folders README.md file](Fonts/README.md) for more information on what fonts I use, where I use them and how to get them.
-
-## Structure
-Folder for each program. Scripts folder for management scripts. Pretty simple. README files o' plenty with info about themes, plugins, etc.
+* [Roboto Mono NerdFont](https://github.com/ryanoasis/nerd-fonts)
 
 ## Contact
 *If you find any problems with the files or configurations described in this repository feel free to send me an email. If you have questions feel free to do the same.*

@@ -2,15 +2,8 @@
 
 ## Plugins
 
-For a plugin manager I use Vundle. I tried Pathogen before. It worked, but didn't like it too much. Vundle is great and easy to use. I did add an alias into my fish configuration to run install, clean and update commands.
+*For a plugin manager I use Vundle.*
 
-__Fish Aliases Vundle__
-
-```shell
-alias -s vpi='vim +PluginInstall +PluginClean +PluginUpdate +qall'
-```
-
-### List
 * [Vundle](https://github.com/VundleVim/Vundle.vim)
 * [vim-css-color](https://github.com/ap/vim-css-color)
 * [vim-fish](https://github.com/dag/vim-fish)
