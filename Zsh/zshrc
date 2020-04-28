@@ -1,7 +1,7 @@
 # UTILITY
 path=$PATH
 function add_path() {
-	path+=":$1"
+	path="$path:$1"
 }
 
 # THEMING
@@ -13,12 +13,13 @@ export EDITOR='vim'
 export VISUAL='vim'
 
 # Path
-add_path ~/Applications/bin
-add_path ~/myApplications/bin # macos /sigh
-add_path /usr/bin
-add_path /usr/local/bin
-add_path /opt/local/bin
-add_path ~/.gem/ruby/2.7.0/bin
+add_path "~/Applications/bin"
+add_path "~/myApplications/bin"
+add_path "/usr/bin"
+add_path "/usr/local/bin"
+add_path "/opt/local/bin"
+add_path "/opt/local/sbin"
+add_path "~/.gem/ruby/2.7.0/bin"
 export PATH=$path
 
 # Plugins
@@ -62,7 +63,7 @@ function mv() {
 }
 
 function ls() {
-	colorls -A
+	colorls $2
 }
 
 function ydl() {
