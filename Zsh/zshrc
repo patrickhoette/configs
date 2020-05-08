@@ -53,6 +53,10 @@ alias c="clear"
 alias e="exit"
 alias fm="ranger"
 
+function vim() {
+	nvim $*
+}
+
 function cp() {
 	command cp -v $*
 }
@@ -66,7 +70,7 @@ function ls() {
 }
 
 function ydl() {
-	youtube-dl $*
+	youtube-dl --external-downloader="aria2c" --external-downloader-args="-j 5 -x 5 -s 5" --prefer-free-formats $*
 }
 
 function update() {
