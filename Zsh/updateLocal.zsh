@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+. ~/.zgen/zgen.zsh
+
 echo "Starting"
 
 git pull

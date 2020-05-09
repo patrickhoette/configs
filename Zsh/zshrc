@@ -3,8 +3,8 @@ theme="miloshadzic"
 
 # SETUP
 # Vim
-export EDITOR='vim'
-export VISUAL='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 # Path
 typeset -U PATH path
