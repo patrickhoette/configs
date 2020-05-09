@@ -15,7 +15,6 @@ call neobundle#begin(expand("$HOME/.config/nvim/bundle"))
 call neobundle#end()
 
 let g:pandoc#modules#disabled=["folding"]
-lua require 'colorize'.setup(nil, { names = false; })
 
 " FORMATTING
 " ---
