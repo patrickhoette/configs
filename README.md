@@ -35,6 +35,6 @@ Just my various configuration files. Take what you like, all of it or what you d
 ## Contact
 *If you find any problems with the files or configurations described in this repository feel free to send me an email. If you have questions feel free to do the same.*
 
-* __Email:__ `public@patrickhoette.email`
-* __LinkedIn:__ [patrickhoette](https://www.linkedin.com/in/patrickhoette/)
+* [Email](mailto:public@patrickhoette.email)
+* [LinkedIn](https://www.linkedin.com/in/patrickhoette/)
 
