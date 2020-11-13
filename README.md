@@ -9,32 +9,19 @@ Just my various configuration files. Take what you like, all of it or what you d
 *List of programs whose configuration files are stored here. I use way more that don't have files.*
 
 ### Text Editors
-* [Vim](https://www.vim.org/)
+* [Neovim](https://neovim.io/)
 	* [Vundle](https://github.com/VundleVim/Vundle.vim)
 * [Atom](https://atom.io/)
 
 ### Terminal
-* [URxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)
+* [iTerm2](https://iterm2.com/)
 * [Zsh](https://www.zsh.org/)
 	* [zgen](https://github.com/tarjoilija/zgen)
 
 ### Development
 * [Android Studio](https://developer.android.com/studio/)
-* [IntelliJ](https://www.jetbrains.com/idea/)
-* [PyCharm](https://www.jetbrains.com/pycharm/?fromMenu)
+* [Anything made by Jetbrains](https://www.jetbrains.com/)
 * [Git](https://git-scm.com/)
-
-### File Management
-* [Ranger](https://ranger.github.io/)
-* [Rsync](https://rsync.samba.org/)
-
-### OS
-* [Arch Linux](https://www.archlinux.org/)
-* [i3-gaps](https://github.com/Airblader/i3)
-* [Pacman](https://www.archlinux.org/pacman/)
-* [Powerpill](https://xyne.archlinux.ca/projects/powerpill/)
-* [Trizen](https://github.com/trizen/trizen)
-* [Makepkg](https://wiki.archlinux.org/index.php/Makepkg)
 
 ### Media
 * [Mpv](https://mpv.io/)
@@ -42,7 +29,8 @@ Just my various configuration files. Take what you like, all of it or what you d
 * [Spotify](https://www.spotify.com)
 
 ## Fonts
-* [Roboto Mono NerdFont](https://github.com/ryanoasis/nerd-fonts)
+* [Roboto Mono NerdFont](https://www.programmingfonts.org/#roboto)
+* [FiraCode NerdFont](https://www.programmingfonts.org/#firacode)
 
 ## Contact
 *If you find any problems with the files or configurations described in this repository feel free to send me an email. If you have questions feel free to do the same.*
