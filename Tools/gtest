@@ -1,0 +1,39 @@
+#!/bin/bash
+# GLOBALS
+gradleCommand="./gradlew clean"
+args=("$@")
+variant=""
+
+# FUNCTIONS
+function processArgs {
+	for arg in "${args[@]}"
+	do
+		case $arg in
+			'-d'|'--debug') variant="Debug" ;;
+			'-r'|'--release') variant="Release" ;;
+			*) gradleCommand="$gradleCommand $arg:test$variant" ;;
+		esac
+	done
+}
+
+function processSingleArg {
+	arg=${args[0]}
+	case $arg in
+		'-d'|'--debug') gradleCommand="$gradleCommand testDebug" ;;
+		'-r'|'--release') gradleCommand="$gradleCommand testRelease" ;;
+		*) gradleCommand="$gradleCommand $arg:test" ;;
+	esac
+}
+
+# SCRIPT
+argCount=${#args[@]}
+if (( $argCount < 1 )); then
+	gradleCommand="$gradleCommand test"
+elif (( $argCount == 1 )); then
+	processSingleArg
+else 
+	processArgs
+fi
+
+$gradleCommand
+
