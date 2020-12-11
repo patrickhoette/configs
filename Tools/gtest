@@ -1,39 +1,109 @@
 #!/bin/bash
+# CONSTANTS
+readonly SCRIPT_ARGS=("$@")
+
+readonly VARIANT_DEBUG='Debug'
+readonly VARIANT_RELEASE='Release'
+
 # GLOBALS
-gradleCommand="./gradlew clean"
-args=("$@")
-variant=""
+test_tasks=''
+variant=''
+use_variant=0
+cmd="./gradlew"
+
+clean=true
+assemble=false
 
 # FUNCTIONS
-function processArgs {
-	for arg in "${args[@]}"
-	do
-		case $arg in
-			'-d'|'--debug') variant="Debug" ;;
-			'-r'|'--release') variant="Release" ;;
-			*) gradleCommand="$gradleCommand $arg:test$variant" ;;
-		esac
-	done
+function print_help {
+	cat <<-HELP_TEXT
+		Script must be run from the root directory of the Gradle project!
+		
+		[GENERAL OPTIONS]
+		These options can be placed at any point.
+		
+		-nc or --no-clean | Do not add clean task
+		-a or --assemble  | Add assemble task
+		
+		[VARIANT OPTIONS]
+		These options will set the specified variant flag FROM THAT POINT ONWARD.
+		
+		-d or --debug     | Set variant flag to "Debug"
+		-r or --release   | Set variant flag to "Release"
+	HELP_TEXT
 }
 
-function processSingleArg {
-	arg=${args[0]}
-	case $arg in
-		'-d'|'--debug') gradleCommand="$gradleCommand testDebug" ;;
-		'-r'|'--release') gradleCommand="$gradleCommand testRelease" ;;
-		*) gradleCommand="$gradleCommand $arg:test" ;;
+function is_option {
+	local -r option=${1}
+	if [[ $option =~ ^-[a-zA-Z]{1,2}$ || $option =~ ^--.+$ ]]; then
+		echo true
+	else
+		echo false
+	fi
+}
+
+function process_option {
+	local -r option=${1}
+	case $option in
+		'-d'|'--debug') 
+			variant=$VARIANT_DEBUG 
+			use_variant=$(( use_variant ^ 1 ))
+			;;
+		'-r'|'--release') 
+			variant=$VARIANT_RELEASE 
+			use_variant=$(( use_variant ^ 1 ))
+			;;
+		'-nc'|'--no-clean') clean=false ;;
+		'-a'|'--assemble') assemble=true ;;
+		'-h'|'--help') print_help ;;
+		*)
+			echo "Unknown option $option!"
+			exit 1
+			;;
 	esac
 }
 
+function process_module {
+	local -r module=${1}
+    test_tasks="$test_tasks $module:test$variant"
+}
+
+function process_arg {
+	local -r arg=${1}
+	if [[ "$(is_option "$arg")" == "true" ]]; then
+		process_option "$arg"
+	else
+		process_module "$arg"
+	fi
+}
+
+function process_args {
+	for arg in "${SCRIPT_ARGS[@]}"
+	do
+		process_arg "$arg"
+	done
+}
+
 # SCRIPT
-argCount=${#args[@]}
-if (( $argCount < 1 )); then
-	gradleCommand="$gradleCommand test"
-elif (( $argCount == 1 )); then
-	processSingleArg
-else 
-	processArgs
+process_args
+
+if (( $use_variant == 0 )); then
+	variant=""
 fi
 
-$gradleCommand
+if [[ "$clean" == true ]]; then
+	cmd="$cmd clean"
+fi
+
+if [[ "$assemble" == true ]]; then
+	cmd="$cmd assemble$variant"
+fi
+
+if (( ${#test_tasks} < 1 )); then
+	cmd="$cmd test$variant"
+else
+	cmd="$cmd$test_tasks"
+fi
+
+$cmd
 
